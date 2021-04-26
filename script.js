@@ -91,7 +91,7 @@ function apariencia(temp, des) {
         Swal.fire({
             position: 'center',
             icon: 'info',
-            title: 'Usa ropa comoda y gorra',
+            title: 'Usa ropa comoda',
             showConfirmButton: false,
             timer: 1500,
             showClass: {
