@@ -1,0 +1,316 @@
+body {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.principal {
+    background-image: radial-gradient(circle at 74.18% -16.45%, #85b9f6 0, #92b7f6 4.17%, #9fb4f5 8.33%, #abb1f2 12.5%, #b7aeef 16.67%, #c1abeb 20.83%, #cba8e5 25%, #d5a5df 29.17%, #dda3d8 33.33%, #e4a1d1 37.5%, #ea9fc9 41.67%, #ee9ec1 45.83%, #f29db9 50%, #f49db1 54.17%, #f69da8 58.33%, #f69ea0 62.5%, #f59f99 66.67%, #f3a191 70.83%, #f0a38b 75%, #eca585 79.17%, #e7a87f 83.33%, #e2aa7b 87.5%, #dcad78 91.67%, #d5b076 95.83%, #cdb374 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+}
+
+.calor {
+    background-image: radial-gradient(circle at 50% 50%, #fffff9 0, #ffffd6 16.67%, #ffffb2 33.33%, #fbf68d 50%, #d5e36a 66.67%, #acd34d 83.33%, #82c434 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+.frio {
+    background-image: radial-gradient(circle at 39.14% 59.12%, #b3bee6 0, #507ecc 50%, #0047b2 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+.titulo-principal {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px;
+}
+
+.titulo-principal #titulo {
+    font-family: 'Langar', cursive;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2rem;
+}
+
+.datos-clima {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(5, 1fr);
+    width: 100%;
+    height: 150px;
+}
+
+.datos-clima .temperatura-principal {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.datos-clima .temperatura-principal #temperatura-grados {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #7D7083;
+    font-size: 3.5rem;
+    margin: 2px;
+    animation: heartBeat;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.datos-clima .temperatura-principal #lugar {
+    margin: 2px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #7D7083;
+}
+
+.datos-clima .temperatura-principal #descripcion {
+    margin: 2px;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #7D7083;
+    animation: backInUp;
+    animation-duration: 2s;
+}
+
+.datos-clima .imagen-clima {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    padding: 5%;
+}
+
+.datos-clima .imagen-clima2 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    padding: 5%;
+}
+
+.datos-clima .imagen-clima img {
+    width: 100%;
+    height: 120px;
+}
+
+.datos-clima .imagen-clima2 img {
+    width: 100%;
+    height: 120px;
+}
+
+.select-clima {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.select-clima p {
+    margin: 5px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #252425;
+}
+
+.select-clima select {
+    width: 300px;
+    text-align-last: center;
+    height: 25px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.temperaturas {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+
+.temperaturas .tem-min {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.temperaturas .tem-min #temp-minima {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #7D7083;
+    font-size: 3.5rem;
+    margin: 2px;
+}
+
+.temperaturas .tem-min #temp-minima-des {
+    margin: 2px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #7D7083;
+}
+
+.temperaturas .tem-max {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.temperaturas .tem-max #temp-maxima {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #7D7083;
+    font-size: 3.5rem;
+    margin: 2px;
+}
+
+.temperaturas .tem-max #temp-maxima-des {
+    margin: 2px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #7D7083;
+}
+
+.temperaturas .humedad {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.temperaturas .humedad #hum {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #7D7083;
+    font-size: 3.5rem;
+    margin: 2px;
+}
+
+.temperaturas .humedad #hum-des {
+    margin: 2px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #7D7083;
+}
+
+@media (max-width:425px) {
+    .titulo-principal #titulo {
+        font-family: 'Langar', cursive;
+        font-size: 2.5rem;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.3rem;
+    }
+    .datos-clima {
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+        width: 100%;
+        height: 120px;
+        margin: 10px 0;
+    }
+    .datos-clima .temperatura-principal {
+        grid-row-start: 1;
+        grid-column-start: 2;
+        width: 100%;
+        padding: 2%;
+    }
+    .datos-clima .temperatura-principal #temperatura-grados {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .datos-clima .temperatura-principal #lugar {
+        margin: 2px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .datos-clima .temperatura-principal #descripcion {
+        margin: 2px;
+        font-size: 0.8rem;
+        font-family: 'Montserrat', sans-serif;
+        color: #7D7083;
+        animation: backInUp;
+        animation-duration: 2s;
+    }
+    .datos-clima .imagen-clima {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        padding: 5%;
+    }
+    .datos-clima .imagen-clima2 {
+        grid-row-start: 1;
+        grid-column-start: 3;
+        padding: 5%;
+    }
+    .datos-clima .imagen-clima img {
+        width: 100%;
+        height: 100px;
+    }
+    .datos-clima .imagen-clima2 img {
+        width: 100%;
+        height: 100px;
+    }
+    .temperaturas {
+        width: 100%;
+        height: 200px;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    .temperaturas .tem-min {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+    .temperaturas .tem-min #temp-minima {
+        font-size: 2rem;
+    }
+    .temperaturas .tem-min #temp-minima-des {
+        font-size: 0.8rem;
+    }
+    .temperaturas .tem-max {
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+    .temperaturas .tem-max #temp-maxima {
+        font-size: 2rem;
+    }
+    .temperaturas .tem-max #temp-maxima-des {
+        font-size: 0.8rem;
+    }
+    .temperaturas .humedad {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .temperaturas .humedad #hum {
+        color: #7D7083;
+        font-size: 2rem;
+    }
+    .temperaturas .humedad #hum-des {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>ClimaAPP</title>
+</head>
+
+<body>
+    <div class="principal" id="pantalla">
+        <section class="titulo-principal">
+            <h1 id="titulo">ClimaAPP</h1>
+        </section>
+
+        <section class="datos-clima">
+            <div class="imagen-clima">
+                <img src="img/termometro.svg" alt="">
+            </div>
+
+            <div class="temperatura-principal">
+                <p id="lugar">Bienvenido</p>
+                <p id="temperatura-grados">Hola</p>
+                <p id="descripcion">Veamos el clima</p>
+            </div>
+
+            <div class="imagen-clima2">
+                <img src="img/termometro.svg" alt="">
+            </div>
+        </section>
+
+        <section class="select-clima">
+            <p>Selecciona tu cuidad</p>
+            <select name="ciudades" id="ciudades">
+                <option value="0">Consulta las ciudades disponibles</option>
+                <option value="Pachuca">Pachuca</option>
+                <option value="Cuernavaca">Cuernavaca</option>
+                <option value="México">México</option>
+                <option value="Monterrey">Monterrey</option>
+                <option value="Tijuana">Tijuana</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Acapulco">Acapulco</option>
+                <option value="Michoacan">Michoacan</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Tulancingo">Tulancingo</option>
+                <option value="Tecolutla">Tecolutla</option>
+                <option value="Merida">Merida</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Colima">Colima</option>
+                <option value="Puerto Vallarta">Puerto Vallarta</option>
+                <option value="San Luis Potosi">San Luis Potosi</option>
+                <option value="Zacatecas">Zacatecas</option>
+                <option value="Culiacan">Culiacan</option>
+                <option value="Mazatlan">Mazatlan</option>
+            </select>
+        </section>
+
+        <section class="temperaturas">
+            <div class="tem-min">
+                <p id="temp-minima"></p>
+                <p id="temp-minima-des"></p>
+            </div>
+
+            <div class="tem-max">
+                <p id="temp-maxima"></p>
+                <p id="temp-maxima-des"></p>
+            </div>
+
+            <div class="humedad">
+                <p id="hum"></p>
+                <p id="hum-des"></p>
+            </div>
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+</html>
